@@ -41,8 +41,8 @@ cd react-blog-app
 npm install
 
 # Запустить в режиме разработки
-npm start```
-
+npm start
+```
 
 ## Структура проекта
 
@@ -61,4 +61,7 @@ src/
 ```
 
 ## Контакты
+
 **D1mkaaa** — [GitHub](https://github.com/D1mkaaa)
+
+---
