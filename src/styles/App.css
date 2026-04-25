@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9eef5 100%);
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  width: 900px;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.navbar {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar__links {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #20b2aa;
+}
+
+.post {
+  display: flex;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(32, 178, 170, 0.4);
+}
+
+.post__content {
+  flex: 1;
+}
+
+.post__content strong {
+  font-size: 1.1rem;
+  color: #1a2a3a;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.post__content div {
+  color: #5a6874;
+  line-height: 1.5;
+}
+
+.post__btns {
+  display: flex;
+  gap: 0.75rem;
+}
+
+button, .myButton {
+  background: linear-gradient(135deg, #20b2aa 0%, #1a9e97 100%);
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 40px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button:hover, .myButton:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(32, 178, 170, 0.3);
+  background: linear-gradient(135deg, #1a9e97 0%, #168a84 100%);
+}
+
+button:active, .myButton:active {
+  transform: scale(0.98);
+}
+
+
+/* Pagination */
+.page__wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page {
+  padding: 0.5rem 1rem;
+  min-width: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: #2c3e50;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.page:hover {
+  background: #f1f5f9;
+  border-color: #20b2aa;
+  transform: translateY(-1px);
+}
+
+.page__current {
+  background: linear-gradient(135deg, #20b2aa 0%, #1a9e97 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(32, 178, 170, 0.4);
+  position: relative;
+}
+
+
+/* .loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #20b2aa;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 2rem auto;
+} */
+
+/* @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+/* Comments section */
+.comments-section {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.comment {
+  padding: 1rem;
+  border-bottom: 1px solid #edf2f7;
+  transition: background 0.2s ease;
+  border-radius: 12px;
+}
+
+.comment:hover {
+  background: #f8fafc;
+}
+
+.comment h5 {
+  color: #20b2aa;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.comment div {
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App {
+    width: 95%;
+  }
+  
+  .post {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .post__btns {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .navbar {
+    padding: 0 1rem;
+  }
+  
+  .page {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
