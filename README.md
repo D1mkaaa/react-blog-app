@@ -4,7 +4,7 @@ SPA-приложение на React для просмотра, создания,
 
 ## Демо
 
-**Живая ссылка:** https://d1mkaaa.github.io/react-blog-app
+Проект доступен по ссылке: [d1mkaaa.github.io/react-blog-app](https://d1mkaaa.github.io/react-blog-app)
 
 ## Технологии
 
