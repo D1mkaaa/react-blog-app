@@ -4,8 +4,7 @@ SPA-приложение на React для просмотра, создания,
 
 ## Демо
 
-<!-- После деплоя на Vercel вставь ссылку сюда -->
-[https://react-blog-app-xxx.vercel.app](https://react-blog-app-xxx.vercel.app)
+**Живая ссылка:** https://d1mkaaa.github.io/react-blog-app
 
 ## Технологии
 
