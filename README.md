@@ -50,7 +50,7 @@ npm start
 
 ## Структура проекта
 
-```
+```text
 src/
 ├── API/                          # Работа с API
 │   └── PostService.js            # Все запросы к серверу (axios)
