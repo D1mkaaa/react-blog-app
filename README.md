@@ -32,10 +32,10 @@
 - ✅ Анимации появления/исчезновения (Framer Motion)
 - ✅ Адаптивный дизайн (мобильные устройства)
 - ✅ Современный UI (стеклянные карточки, градиенты)
-
+  
 ## 📦 Установка и запуск
 
-```bash
+bash
 # Клонировать репозиторий
 git clone https://github.com/D1mkaaa/react-blog-app.git
 
@@ -47,84 +47,57 @@ npm install
 
 # Запустить в режиме разработки
 npm start
-
-№ Сборка для продакшна
-bash
-npm run build
-
 ## Структура проекта
 
 ```
-text
-
-src/
-├── API/                          # Работа с API
-│   └── PostService.js            # Все запросы к серверу (axios)
-│
-├── components/                   # Все React-компоненты
-│   ├── AppRouter.jsx             # Главный роутер (маршрутизация)
-│   ├── ErrorBoundary.jsx         # Отлов ошибок в приложении
-│   ├── PostFilter.jsx            # Фильтр (сортировка + поиск)
-│   ├── PostForm.jsx              # Форма создания нового поста
-│   ├── PostItem.jsx              # Карточка одного поста
-│   ├── PostList.jsx              # Список всех постов (с анимацией)
-│   │
-│   └── UI/                       # Переиспользуемые UI-компоненты
-│       ├── button/               # Кнопка
-│       │   ├── MyButton.jsx
-│       │   └── MyButton.module.css
-│       ├── input/                # Поле ввода
-│       │   ├── MyInput.jsx
-│       │   └── MyInput.module.css
-│       ├── Loader/               # Лоадер (спиннер)
-│       │   ├── Loader.jsx
-│       │   └── Loader.module.css
-│       ├── MyModal/              # Модальное окно
-│       │   ├── MyModal.jsx
-│       │   └── MyModal.module.css
-│       ├── Navbar/               # Панель навигации
-│       │   └── NavBar.jsx
-│       ├── pagination/           # Пагинация (номера страниц)
-│       │   └── Pagination.jsx
-│       └── select/               # Выпадающий список
-│           └── MySelect.jsx
-│
-├── context/                      # Контекст (глобальное состояние)
-│   └── index.js                  # AuthContext (авторизация)
-│
-├── hooks/                        # Кастомные хуки
-│   ├── useFetching.jsx           # Оборачивает асинхронные запросы (loading, error)
-│   ├── useObserver.jsx           # Бесконечный скролл (Intersection Observer)
-│   └── usePosts.jsx              # Сортировка + поиск постов
-│
-├── pages/                        # Страницы приложения
-│   ├── About.jsx                 # О сайте
-│   ├── Login.jsx                 # Страница входа
-│   ├── PostIdPages.jsx           # Страница отдельного поста с комментариями
-│   └── Posts.jsx                 # Главная страница с постами
-│
-├── router/                       # Настройка маршрутов
-│   └── routes.js                 # publicRoutes и privateRoutes
-│
-├── styles/                       # Глобальные стили
-│   └── App.css                   # Основные стили (навбар, карточки, адаптив)
-│
-├── utils/                        # Вспомогательные функции
-│   └── pages.js                  # Подсчёт страниц для пагинации
-│
-├── App.js                        # Главный компонент (обёртка)
-└── index.js                      # Точка входа (рендер приложения)
+react-blog-app/
+├── src/
+│   ├── API/
+│   │   └── PostService.js            # Все запросы к серверу (axios)
+│   ├── components/
+│   │   ├── AppRouter.jsx             # Главный роутер (маршрутизация)
+│   │   ├── ErrorBoundary.jsx         # Отлов ошибок в приложении
+│   │   ├── PostFilter.jsx            # Фильтр (сортировка + поиск)
+│   │   ├── PostForm.jsx              # Форма создания нового поста
+│   │   ├── PostItem.jsx              # Карточка одного поста
+│   │   ├── PostList.jsx              # Список всех постов (с анимацией)
+│   │   └── UI/
+│   │       ├── button/               # Кнопка
+│   │       ├── input/                # Поле ввода
+│   │       ├── Loader/               # Лоадер (спиннер)
+│   │       ├── MyModal/              # Модальное окно
+│   │       ├── Navbar/               # Панель навигации
+│   │       ├── pagination/           # Пагинация (номера страниц)
+│   │       └── select/               # Выпадающий список
+│   ├── context/
+│   │   └── index.js                  # AuthContext (авторизация)
+│   ├── hooks/
+│   │   ├── useFetching.jsx           # Оборачивает асинхронные запросы
+│   │   ├── useObserver.jsx           # Бесконечный скролл (Intersection Observer)
+│   │   └── usePosts.jsx              # Сортировка + поиск постов
+│   ├── pages/
+│   │   ├── About.jsx                 # О сайте
+│   │   ├── Login.jsx                 # Страница входа
+│   │   ├── PostIdPages.jsx           # Страница поста с комментариями
+│   │   └── Posts.jsx                 # Главная страница с постами
+│   ├── router/
+│   │   └── routes.js                 # publicRoutes и privateRoutes
+│   ├── styles/
+│   │   └── App.css                   # Глобальные стили
+│   ├── utils/
+│   │   └── pages.js                  # Подсчёт страниц для пагинации
+│   ├── App.js                        # Корневой компонент
+│   └── index.js                      # Точка входа
+├── public/
+└── package.json
 ```
 
-№№ 📊 API Данные
+📊 API Данные
 Для демонстрации используются тестовые данные с JSONPlaceholder API:
 
 posts — список постов (заголовки, текст, id)
 
 comments — комментарии к постам с email и текстом
 
-## Контакты
-
-📞
+📞 Контакты
 D1mkaaa — GitHub
-
